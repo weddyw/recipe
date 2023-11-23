@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* end of css reset */
+/* text and font specs */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+h1,
+span,
+#connect > h3 {
+    display: none;
+}
+nav a, nav span,
+menu li, #social li,
+.menu li, footer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    display: none;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 25px;
+}
+h4 {
+    width: 100px;
+}
+p, dd, li,
+nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    
+  }
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 50%;
+    float: left;
+    padding-right: 0;
+    margin: 0;
+    text-align:center;
+}
+dd {
+    width: 50%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+li {
+    list-style: none;
+}
+ol li {
+    list-style: decimal;
+    padding-bottom: 10px;
+}
+#ingredients li {
+    list-style: square;
+}
+/*end*/
+html {
+    background-color: rgba(122,191,191, .5);
+    margin: auto;
+}
+body {
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#sides {
+    background-color: #7abfbf;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    color: #eb5428;
+    transition: color .5s ease-in-out;
+}
+a:hover {
+    color: black;
+    transform: translateY(-5px);
+    transition: .5s ease-in-out;
+}
+.user-sign {
+    color: black;
+    transition: color .5s ease-in-out;
+}
+.user-sign:hover {
+    color: #eb5428;
+}
+.user-sign svg :hover {
+    stroke: black;
+}
+svg:hover {
+    transform: rotate(360deg);
+    transition: 1s ease-in-out;
+}
+h2 {
+    vertical-align:center;
+    text-align: center;
+}
+.nav-top {
+    margin: auto;
+    background-color: #ffffff;
+    padding: 0;
+}
+.nav-top h3 {
+    display: none;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 768px;
+    padding-left: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.menu > li {
+    margin: 0 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    color: #eb5428;
+}
+.menu li img {
+    width: 50px;
+}
+.empty {
+    padding: 20px;
+}
+.menu-button-box {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-button {
+    position: absolute;
+    left: 0;
+    padding-top: 5px;
+}
+.home {
+    background-color: #eb5428;
+    width:80px;
+    color: #eb5428;
+}
+.home svg {
+    padding-top: 10px;
+}
+#click-menu {
+    display: none;
+}
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: 20px;
+    height: 20px;
+    width: 30px;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+button {
+    background-color: #eb5428;
+    border: 1px solid #eb5428;
+}
+input {
+    border: 2px solid #eb5428;
+    height: 32.5px;
+}
+input::placeholder {
+    font-size: 12px;
+}
+p, dl, ol {
+    padding: 0 10px;
+}
+ul {
+    padding-left: 25px;
+}
+ul > li {
+    line-height: 2;
+}
+menu img {
+    height: 100px;
+    width: 100px;
+}
+#tacos, footer img {
+    width: 100%;
+}
+header {
+    margin-top: 100px;
+}
+.rating {
+    font-weight: bold;
+}
+button {
+    background-color: #eb5428;
+}
+footer small:last-of-type {
+    padding-top: 10px;
+}
