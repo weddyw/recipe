@@ -148,7 +148,7 @@ a:hover {
 .user-sign:hover {
     color: #eb5428;
 }
-.user-sign svg :hover {
+.user-sign svg:hover {
     stroke: black;
 }
 svg:hover {
@@ -270,4 +270,294 @@ button {
 }
 footer small:last-of-type {
     padding-top: 10px;
+}
+@media (max-width: 768px) {
+    h1 {
+        display: none;
+    }
+    .menu-button-box {
+        display: flex;
+        position: fixed;
+        top: 0;
+        background-color: #eb5428;
+        height: 80px;
+        width: 414px;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        margin-top: 50px;
+        flex-direction: column;
+        width: 414px;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+    #click-menu ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height .5s ease-in-out;
+    }
+    #click-menu ~ .menu li img,
+    #click-menu:checked ~ .menu li img {
+        display: none;
+    }
+    #click-mene:checked ~ .menu li div,
+    #click-menu:checked ~ .menu li svg {
+        display: none;
+    }
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 2;
+    }
+    .menu a:hover {
+        color: #7abfbf;
+        transform: rotate(-20deg);
+        transition: .5s ease-in-out;
+        z-index: 2;
+    }
+}
+@media (min-width: 414px) {
+    body {
+        width: 414px;
+        grid-template-columns: 1fr;
+    }
+    nav ul, #social {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    h1 {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        padding-left: 70px;
+        color: #ffffff;
+    }
+    a {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #sides h3 {
+        margin: 15 px 0;
+        padding-top: 5px;
+    }
+    #sides img {
+        width: 100px;
+        float: left;
+        padding-right: 15px;
+    }
+    #sides menu {
+        padding-left: 10px;
+    }
+    #sides {
+        height: 580px;
+    }
+    #sides li {
+        height: 130px;
+    }
+    #sides h4 {
+        text-align: left;
+        position: relative;
+        top: 25px;
+        left: 115px;
+        margin: 0;
+    }
+    #sides p {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        position: relative;
+        top: 25px;
+    }
+    #sides svg {
+        position: relative;
+        top: 30px;
+    }
+    footer div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+    footer img {
+        width: 50%;
+        margin: auto;
+    }
+    ol {
+        padding-left: 25px;
+    }
+}
+@media (min-width:768px) {
+    body {
+        width: 768px;
+        display: grid;
+    }
+    h1 {
+        display: none;
+    }
+    header h2 {
+        text-align: left;
+        padding-left: 20px;
+        background-color: rgba(122,191,191, .5);
+        padding: 15px 20px;
+        margin-top: 10px;
+    }
+    .menu {
+        box-shadow: 0.5px 3px 3px 0.5px #adadad;
+    }
+    dt {
+        text-align: end;
+        position: relative;
+        right: 10px;
+    }
+    .recipe-directions {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    form {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        margin-left: 490px;
+        margin-top: 105px;
+    }
+    #ingredients {
+        grid-column-start: 1;
+    }
+    #directions {
+        grid-column-start: 2;
+        line-height: 2;
+    }
+    #sides menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    #sides {
+        height: 350px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer div {
+        grid-row-start: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    footer ul {
+        grid-column-start: 2;
+    }
+}
+@media (min-width:1280px) {
+    body {
+        width: 1280px;
+    }
+    .user-sign {
+        position: relative;
+        bottom: 10px;
+    }
+    .menu {
+        width: 1280px;
+        justify-content: space-around;
+    }
+    #grid-head {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr;
+    }
+    #grid-head ul {
+        display: flex;
+        flex-direction: column;
+        border: #eb5428 2px solid;
+        margin-top: 0;
+        height: 500px;
+    }
+    #grid-head ul:last-child {
+        padding-bottom: 350px;
+    }
+    #grid-head p {
+        grid-row-start: 1;
+        grid-column-start: 3;
+        line-height: 1.5;
+    }
+    #grid-head p:nth-of-type(2) {
+        padding-top: 120px;
+    }
+    header h2 {
+        padding-top: 80px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+    form {
+        margin-top: 120px;
+    }
+    #details {
+        background-color: black;
+        color: #7abfbf;
+    }
+    #details h3 {
+        margin-top: -17px;
+        padding-top: 10px;
+    }
+    dl {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+    }
+    dd, dt {
+        text-align: center;
+        width: 100%;
+    }
+    dd {
+        position: relative;
+        right: 10px;
+    }
+    #sides {
+        height: 460px;
+    }
+    #sides menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+    }
+    #sides p, #sides svg {
+        grid-row-start: 2;
+        left: 28px;
+    }
+    #sides menu img {
+        height: auto;
+        width: auto;
+        margin: 0 10px 30px 35px;
+    }
+    #sides h4 {
+        top: 280px;
+        left: 35px;
+    }
+    footer img {
+        width: 200px;
+    }
+    footer div {
+        flex-direction: row-reverse;
+    }
+    footer small:first-of-type {
+        right: 220px;
+        bottom: 5px;
+    }
+    small {
+        position: relative;
+        right: 130px;
+    }
 }
