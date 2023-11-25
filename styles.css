@@ -519,3 +519,24 @@ footer small:last-of-type {
         bottom: -15px;
     }
 }
+@media print {
+    body {
+        margin: 0.5in;
+    }
+    body, h1, h2, h3, h4, h5, h6, p, img, small, dl, dt, dd, ol, ul, li, form, label, footer, header, menu, nav, section {
+        font-family: serif;
+    }
+    img {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    a:after {
+        content: " (" attr(href) ")";
+    }
+    @page {
+        size: 8.5in 11in;
+        margin: 0.5in;
+    }
+}
